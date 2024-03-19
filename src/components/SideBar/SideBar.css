@@ -1,0 +1,8 @@
+.side-bar {
+  max-width: 150px;
+  background-color: yellow;
+}
+
+.side-bar h2 {
+  color: red;
+}
