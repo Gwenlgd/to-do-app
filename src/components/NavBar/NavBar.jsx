@@ -1,12 +1,11 @@
 import React from "react";
-import logo from "/src/assets/logo-todo.svg";
+// import logo from "/src/assets/logo-todo.svg";
 import "./NavBar.css";
 
 function NavBar() {
   return (
     <nav className="nav-bar">
-      <img src={logo} alt="logo-todo" />
-      <h1>TO DOUX</h1>
+      <h1>TO DO LIST</h1>
     </nav>
   );
 }

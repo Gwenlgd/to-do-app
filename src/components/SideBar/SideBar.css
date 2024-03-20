@@ -1,8 +1,12 @@
 .side-bar {
-  max-width: 150px;
-  background-color: yellow;
+  max-width: 180px;
+  height: 100%;
+  padding-left: 10px;
+  background-color: var(--bg-color);
+  color: var(--text-color-w-bg);
 }
 
 .side-bar h2 {
-  color: red;
+  color: var(--text-color-w-bg);
+  font-weight: bolder;
 }
