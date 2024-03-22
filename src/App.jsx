@@ -2,11 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import SideBar from "./components/SideBar/SideBar";
 import Footer from "./components/Footer/Footer";
-
 import Clock from "./components/Clock/Clock";
-
-
-import Calendar from "./components/Calendar/Calendar";
 import "./App.css";
 import NotFoundPage from "./pages/NotFoundPage";
 import AboutPage from "./pages/AboutPage";

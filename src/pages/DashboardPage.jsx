@@ -7,22 +7,38 @@ import Quotes from "./../components/Quotes/Quotes";
 
 function DashboardPage() {
   return (
-    <div className="container-dashboard">
+    <div className="container-dash">
       {/* <h1>Dashboard</h1> */}
       {/* ADD : div for Calendar, form new tasks, add a note, quotes, humour, time */}
       <div className="container-top">
-        <Calendar />
+        <div className="calendar">
+          <Calendar />
+        </div>
         {/* <Tasks /> */}
-        <FormNewTasks />
-        <Notes />
+        <div className="form-new-tasks">
+          <FormNewTasks />
+        </div>
+        <div className="notes">
+          <Notes />
+        </div>
       </div>
+
       <div className="container-bottom">
-        <TasksOfTheDay />
+        <div className="tasks-display">
+          <TasksOfTheDay />
+        </div>
 
         <div className="little-things">
-          <Quotes />
-          <div className="moods"></div>
-          <div className="time"></div>
+          <div className="quotes">
+            <Quotes />
+          </div>
+          {/* CHANGE THIS */}
+          <div className="moods">
+            <p>What is your mood of the day</p>
+          </div>
+          <div className="time">
+            <p>Time display here</p>
+          </div>
         </div>
       </div>
     </div>

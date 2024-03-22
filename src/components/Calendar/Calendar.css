@@ -1,3 +1,8 @@
+.calendar {
+  border: 1px solid;
+  width: 300px;
+  height: 250px;
+  
 .react-calendar {
   width: 250px;
   height: 250px;

@@ -1,8 +1,7 @@
 import { useState } from "react";
-import data from "../../datatwo.json";
+import data from "../../data.json";
 import "./Tasks.css";
 
-// ADD UPDATE !!
 function Tasks() {
   const [tasks, setTasks] = useState(data);
 
@@ -16,23 +15,14 @@ function Tasks() {
     console.log(filteredTasks);
   }
 
-  function handleUpdate(taskId) {
-    // NEED TO ADD HOW TO UPDATE
-    console.log("Update task with ID:", taskId);
-  }
-
   return (
     <div className="list-container">
       {tasks.map((task) => {
         return (
           <div key={task.id} className="task-container">
-            <h2>Title:{task.title}</h2>
-            <p>Category: {task.category}</p>
-            <p>Description: {task.description}</p>
-            <p>Due date: {task.duedate}</p>
-            <p>Statut: {task.status ? "Completed" : "Not Completed"}</p>
+            <h2>Title:{task.task}</h2>
+            <p>Statut: {task.completed ? "Completed" : "Not Completed"}</p>
             <button onClick={() => handleDelete(task.id)}>Delete</button>
-            <button onClick={() => handleUpdate(task.id)}>Update</button>
           </div>
         );
       })}

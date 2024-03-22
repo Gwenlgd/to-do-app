@@ -38,11 +38,34 @@ h1 {
 
 .main-container {
   position: relative;
-  height: 80vh;
+  height: max-content;
+  margin-bottom: 10px;
   display: flex;
 }
 
-.container-dashboard {
+.container-dash {
   width: 100%;
-  background-color: red;
+  display: grid;
+}
+
+.container-top,
+.container-bottom {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+/* CONTAINER BOTTOM - LITTLE THINGS */
+.little-things {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+.moods,
+.time {
+  border: 1px solid;
+  width: 300px;
+  height: 90px;
 }
