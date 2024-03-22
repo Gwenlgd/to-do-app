@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import SideBar from "./components/SideBar/SideBar";
 import Footer from "./components/Footer/Footer";
-import Clock from "./components/Clock/Clock";
 import "./App.css";
 import NotFoundPage from "./pages/NotFoundPage";
 import AboutPage from "./pages/AboutPage";
@@ -14,8 +13,6 @@ function App() {
       <NavBar />
       <div className="main-container">
         <SideBar />
-
-        <Clock />
 
         <Routes>
           <Route path="/" element={<DashboardPage />} />

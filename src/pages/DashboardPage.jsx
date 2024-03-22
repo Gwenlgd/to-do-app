@@ -1,9 +1,9 @@
-// import Tasks from "./../components/Tasks/Tasks";
 import Calendar from "./../components/Calendar/Calendar";
 import FormNewTasks from "./../components/FormNewTasks/FormNewTasks";
 import Notes from "./../components/Notes/Notes";
 import TasksOfTheDay from "./../components/TasksOfTheDay/TasksOfTheDay";
 import Quotes from "./../components/Quotes/Quotes";
+import Clock from "./../components/Clock/Clock";
 
 function DashboardPage() {
   return (
@@ -37,7 +37,7 @@ function DashboardPage() {
             <p>What is your mood of the day</p>
           </div>
           <div className="time">
-            <p>Time display here</p>
+            <Clock />
           </div>
         </div>
       </div>
