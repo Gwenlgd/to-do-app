@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
-// import SideBar from "./components/SideBar/SideBar";
+import SideBar from "./components/SideBar/SideBar";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -11,13 +11,15 @@ function App() {
   return (
     <>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<DashboardPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <div className="main-container">
+        <SideBar />
 
-      <div className="main-container">{/* <SideBar /> */}</div>
+        <Routes>
+          <Route path="/" element={<DashboardPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </div>
       <Footer />
     </>
   );
