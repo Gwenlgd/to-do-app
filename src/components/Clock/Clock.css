@@ -1,4 +1,7 @@
 .clock {
-  font-family: fantasy;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 50px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: whitesmoke;
 }

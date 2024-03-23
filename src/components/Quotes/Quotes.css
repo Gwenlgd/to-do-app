@@ -2,4 +2,9 @@
   border: 1px solid;
   width: 300px;
   height: 90px;
+  margin-top: 5px;
+  text-align: center;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 20px;
+  background-color: whitesmoke;
 }
