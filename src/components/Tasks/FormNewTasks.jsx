@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import "./FormNewTasks.css";
-import data from "../../data/datatwo.json";
+import "./Tasks.css";
+import data from "../../data/tasksdata.json";
 
 function FormNewTasks() {
   const [tasks, setTasks] = useState(data);
