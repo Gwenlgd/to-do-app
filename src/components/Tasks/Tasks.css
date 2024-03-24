@@ -2,3 +2,16 @@
   padding: 30px;
   width: 100%;
 }
+
+/* TASKS OF THE DAY */
+.tasks-display {
+  border: 1px solid;
+  width: 700px;
+}
+
+/* FORM NEW TASKS */
+.form-new-tasks {
+  border: 1px solid;
+  width: 300px;
+  height: 250px;
+}

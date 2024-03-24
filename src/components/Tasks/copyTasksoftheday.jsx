@@ -1,6 +1,6 @@
-import Tasks from "./../Tasks/Tasks";
-import { Link } from "react-router-dom";
-import "./TasksOfTheDay.css";
+import Tasks from "./Tasks";
+// import { Link } from "react-router-dom";
+import "./Tasks.css";
 
 // Add the tasks here?
 function TasksOfTheDay() {
@@ -8,7 +8,7 @@ function TasksOfTheDay() {
     <div>
       <h2>Your tasks for today</h2>
       <Tasks />
-      <Link to="/all-tasks">See all tasks</Link>
+      {/* <Link to="/all-tasks">See all tasks</Link> */}
     </div>
   );
 }

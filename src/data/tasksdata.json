@@ -12,7 +12,7 @@
     "title": "Buy groceries",
     "description": "Purchase groceries including fruits, vegetables, and household essentials.",
     "category": "Personal Errands",
-    "dueDate": "2024-03-25",
+    "dueDate": "2024-03-24",
     "statusTask": true
   },
   {
@@ -28,7 +28,7 @@
     "title": "Fix leaking faucet",
     "description": "Repair the leaking faucet in the kitchen to prevent water wastage.",
     "category": "Home Maintenance",
-    "dueDate": null,
+    "dueDate": "2024-03-23",
     "statusTask": false
   },
   {

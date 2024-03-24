@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Grocery List",
+    "description": "List of items to buy from the grocery store.",
+    "createdAt": "2024-03-24"
+  },
+  {
+    "id": 2,
+    "title": "Workout Plan",
+    "description": "Schedule for the week's workout routine.",
+    "createdAt": "2024-03-23"
+  },
+  {
+    "id": 3,
+    "title": "Book Recommendations",
+    "description": "A list of books recommended by friends.",
+    "createdAt": "2024-03-22"
+  },
+  {
+    "id": 4,
+    "title": "Vacation Ideas",
+    "description": "Brainstorming ideas for the next vacation destination.",
+    "createdAt": "2024-03-21"
+  },
+  {
+    "id": 5,
+    "title": "Budget Planning",
+    "description": "Plan for managing monthly expenses and savings.",
+    "createdAt": "2024-03-20"
+  },
+  {
+    "id": 6,
+    "title": "Home Improvement Projects",
+    "description": "List of projects to enhance the home environment.",
+    "createdAt": "2024-03-19"
+  },
+  {
+    "id": 7,
+    "title": "Recipe Collection",
+    "description": "Compilation of favorite recipes for everyday cooking.",
+    "createdAt": "2024-03-18"
+  },
+  {
+    "id": 8,
+    "title": "Movie Watchlist",
+    "description": "List of must-watch movies recommended by critics.",
+    "createdAt": "2024-03-17"
+  },
+  {
+    "id": 9,
+    "title": "Hobby Ideas",
+    "description": "Exploring potential hobbies for leisure time.",
+    "createdAt": "2024-03-16"
+  },
+  {
+    "id": 10,
+    "title": "Career Goals",
+    "description": "Setting goals and objectives for professional development.",
+    "createdAt": "2024-03-15"
+  }
+]
