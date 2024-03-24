@@ -4,79 +4,79 @@
     "title": "Read the project brief",
     "description": "Follow the link and read the project brief document to understand project requirements.",
     "category": "Work Projects",
-    "duedate": "25/03/2024",
-    "status": false
+    "dueDate": "25/03/2024",
+    "statusTask": false
   },
   {
     "id": 2,
     "title": "Buy groceries",
     "description": "Purchase groceries including fruits, vegetables, and household essentials.",
     "category": "Personal Errands",
-    "duedate": "24/03/2024",
-    "status": true
+    "dueDate": "24/03/2024",
+    "statusTask": true
   },
   {
     "id": 3,
     "title": "Attend yoga class",
     "description": "Join the 6 PM yoga class at the local studio for relaxation and exercise.",
     "category": "Health & Fitness",
-    "duedate": "23/03/2024",
-    "status": false
+    "dueDate": "23/03/2024",
+    "statusTask": false
   },
   {
     "id": 4,
     "title": "Fix leaking faucet",
     "description": "Repair the leaking faucet in the kitchen to prevent water wastage.",
     "category": "Home Maintenance",
-    "duedate": null,
-    "status": false
+    "dueDate": null,
+    "statusTask": false
   },
   {
     "id": 5,
     "title": "Review monthly budget",
     "description": "Review income and expenses for the month and update the budget accordingly.",
     "category": "Financial Management",
-    "duedate": "31/03/2024",
-    "status": false
+    "dueDate": "31/03/2024",
+    "statusTask": false
   },
   {
     "id": 6,
     "title": "Study for the exam",
     "description": "Spend 2 hours studying for the upcoming history exam.",
     "category": "Education & Learning",
-    "duedate": "02/04/2024",
-    "status": false
+    "dueDate": "02/04/2024",
+    "statusTask": false
   },
   {
     "id": 7,
     "title": "Plan summer vacation",
     "description": "Start planning for the summer vacation, including booking flights and accommodations.",
     "category": "Travel Planning",
-    "duedate": "15/04/2024",
-    "status": false
+    "dueDate": "15/04/2024",
+    "statusTask": false
   },
   {
     "id": 8,
     "title": "Prepare grocery list",
     "description": "Make a list of necessary items for the upcoming week and plan the shopping.",
     "category": "Personal Errands",
-    "duedate": "28/03/2024",
-    "status": false
+    "dueDate": "28/03/2024",
+    "statusTask": false
   },
   {
     "id": 9,
     "title": "Attend team meeting",
     "description": "Join the weekly team meeting to discuss project progress.",
     "category": "Work Projects",
-    "duedate": "26/03/2024",
-    "status": false
+    "dueDate": "26/03/2024",
+    "statusTask": false
   },
   {
     "id": 10,
     "title": "Exercise at the park",
     "description": "Exercise at the park for 30 minutes to stay active.",
     "category": "Health & Fitness",
-    "duedate": "29/03/2024",
-    "status": false
+    "dueDate": "29/03/2024",
+    "statusTask": false
   }
 ]

@@ -29,7 +29,7 @@ function Tasks() {
             <h2>Title:{task.title}</h2>
             <p>Category: {task.category}</p>
             <p>Description: {task.description}</p>
-            <p>Due date: {task.duedate}</p>
+            <p>Due date: {task.dueDate}</p>
             <p>Statut: {task.status ? "Completed" : "Not Completed"}</p>
             <button onClick={() => handleDelete(task.id)}>Delete</button>
             <button onClick={() => handleUpdate(task.id)}>Update</button>
