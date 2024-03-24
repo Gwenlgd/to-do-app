@@ -5,7 +5,7 @@ import Footer from "./components/Footer/Footer";
 import "./App.css";
 import NotFoundPage from "./pages/NotFoundPage";
 import AboutPage from "./pages/AboutPage";
-import DashboardPage from "./pages/DashboardPage";
+import DashboardPage from "./pages/DashboardPage.jsx";
 
 function App() {
   return (

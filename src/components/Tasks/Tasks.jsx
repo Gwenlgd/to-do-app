@@ -1,8 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import data from "../../data/datatwo.json";
 import "./Tasks.css";
 
-// ADD UPDATE !!
 function Tasks() {
   const [tasks, setTasks] = useState(data);
   const [editingTask, setEditingTask] = useState(null);
@@ -15,10 +15,7 @@ function Tasks() {
   });
 
   function handleDelete(id) {
-    const filteredTasks = tasks.filter((oneTask) => {
-      console.log(oneTask.id, id);
-      return oneTask.id !== id;
-    });
+    const filteredTasks = tasks.filter((oneTask) => oneTask.id !== id);
     setTasks(filteredTasks);
   }
 
@@ -54,73 +51,78 @@ function Tasks() {
 
   return (
     <div className="list-container">
-      {tasksOfTheDay.map((task) => {
-        return (
-          <div key={task.id} className="task-container">
-            {editingTask === task.id ? (
-              // Render form fields if the task is being edited
-              <form onSubmit={handleSubmit}>
-                <label>
-                  New title
-                  <input
-                    type="text"
-                    name="title"
-                    value={updatedTask.title}
-                    onChange={handleChange}
-                  />
-                </label>
-                <label>
-                  New title
-                  <input
-                    type="text"
-                    name="category"
-                    value={updatedTask.category}
-                    onChange={handleChange}
-                  />
-                </label>
-                <label>
-                  New description
-                  <input
-                    type="text"
-                    name="description"
-                    value={updatedTask.description}
-                    onChange={handleChange}
-                  />
-                </label>
-                <label>
-                  New due date
-                  <input
-                    type="date"
-                    name="dueDate"
-                    value={updatedTask.dueDate}
-                    onChange={handleChange}
-                  />
-                </label>
-                <button type="submit">Save</button>
-              </form>
-            ) : (
-              <>
-                <h2>Title: {task.title}</h2>
-                <p>Category: {task.category}</p>
-                <p>Description: {task.description}</p>
-                <p>Due date: {task.dueDate}</p>
-                <label>
-                  Status:
-                  <input
-                    type="checkbox"
-                    checked={task.status}
-                    onChange={() => handleCheckboxChange(task.id)}
-                  />
-                  {task.status ? "Completed" : "Not Completed"}
-                </label>
-
-                <button onClick={() => handleDelete(task.id)}>Delete</button>
-                <button onClick={() => handleUpdate(task.id)}>Update</button>
-              </>
-            )}
-          </div>
-        );
-      })}
+      <Link to="/all-tasks">Show All Tasks</Link>
+      {tasksOfTheDay.length === 0 ? (
+        <div>
+          <h3>No tasks for today. Please add one or see all the tasks list.</h3>
+        </div>
+      ) : (
+        tasksOfTheDay.map((task) => {
+          return (
+            <div key={task.id} className="task-container">
+              {editingTask === task.id ? (
+                <form onSubmit={handleSubmit}>
+                  <label>
+                    New title
+                    <input
+                      type="text"
+                      name="title"
+                      value={updatedTask.title}
+                      onChange={handleChange}
+                    />
+                  </label>
+                  <label>
+                    New title
+                    <input
+                      type="text"
+                      name="category"
+                      value={updatedTask.category}
+                      onChange={handleChange}
+                    />
+                  </label>
+                  <label>
+                    New description
+                    <input
+                      type="text"
+                      name="description"
+                      value={updatedTask.description}
+                      onChange={handleChange}
+                    />
+                  </label>
+                  <label>
+                    New due date
+                    <input
+                      type="date"
+                      name="dueDate"
+                      value={updatedTask.dueDate}
+                      onChange={handleChange}
+                    />
+                  </label>
+                  <button type="submit">Save</button>
+                </form>
+              ) : (
+                <>
+                  <h2>Title: {task.title}</h2>
+                  <p>Category: {task.category}</p>
+                  <p>Description: {task.description}</p>
+                  <p>Due date: {task.dueDate}</p>
+                  <label>
+                    Status:
+                    <input
+                      type="checkbox"
+                      checked={task.status}
+                      onChange={() => handleCheckboxChange(task.id)}
+                    />
+                    {task.status ? "Completed" : "Not Completed"}
+                  </label>
+                  <button onClick={() => handleDelete(task.id)}>Delete</button>
+                  <button onClick={() => handleUpdate(task.id)}>Update</button>
+                </>
+              )}
+            </div>
+          );
+        })
+      )}
     </div>
   );
 }
