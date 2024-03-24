@@ -1,7 +1,6 @@
-//import React from "react";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../Quotes/Quotes.css";
-import quotes from "../../quotes.json";
+import quotes from "../../data/quotes.json";
 
 /*function Quotes() {
   return (
@@ -25,10 +24,10 @@ function Quotes() {
       setCurrentQuote(quotes[randomIndex].message);
     };
 
-    updateQuote(); // Mise à jour initiale de la citation
+    updateQuote();
 
-    const hourInMillis = 60 * 60 * 1000; // 1 heure en millisecondes
-    const intervalId = setInterval(updateQuote, hourInMillis); //  la citation toutes les heures mise a jour
+    const hourInMillis = 60 * 60 * 1000;
+    const intervalId = setInterval(updateQuote, hourInMillis);
 
     return () => clearInterval(intervalId);
   }, []);

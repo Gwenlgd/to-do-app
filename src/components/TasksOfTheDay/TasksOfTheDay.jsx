@@ -4,7 +4,12 @@ import "./TasksOfTheDay.css";
 
 // Add the tasks here?
 function TasksOfTheDay() {
-  return <Tasks />;
+  return (
+    <div>
+      <h2>Your tasks for today</h2>
+      <Tasks />
+    </div>
+  );
 }
 
 export default TasksOfTheDay;
