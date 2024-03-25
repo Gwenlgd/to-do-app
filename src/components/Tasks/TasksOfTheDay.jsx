@@ -2,8 +2,7 @@ import { useState } from "react";
 import data from "../../data/tasksdata.json";
 import "./Tasks.css";
 
-function TasksOfTheDay() {
-  const [tasks, setTasks] = useState(data);
+function TasksOfTheDay({ tasks, setTasks }) {
   const [editingTask, setEditingTask] = useState(null);
   const [updatedTask, setUpdatedTask] = useState({
     title: "",
@@ -46,7 +45,10 @@ function TasksOfTheDay() {
   }
 
   const today = new Date().toISOString().split("T")[0];
-  const tasksOfTheDay = tasks.filter((task) => task.dueDate === today);
+  // const tasksOfTheDay = tasks.filter((task) => task.dueDate === today);
+  const tasksOfTheDay = tasks
+    ? tasks.filter((task) => task.dueDate === today)
+    : [];
 
   return (
     <div>

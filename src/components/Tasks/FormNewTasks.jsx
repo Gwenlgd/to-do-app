@@ -9,6 +9,7 @@ function FormNewTasks({ addTask }) {
   const [category, setCategory] = useState("-1");
   const [dueDate, setDueDate] = useState("");
   const [statusTask, setStatusTask] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
   useEffect(() => {
     const currentDate = new Date();
@@ -35,11 +36,10 @@ function FormNewTasks({ addTask }) {
       dueDate,
       statusTask,
     };
-    console.log("handlesubmit");
     addTask(newTask);
-
-    // setTasks([...tasks, newTask]);
     resetInputs();
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 3000);
   };
 
   const resetInputs = () => {
@@ -126,6 +126,7 @@ function FormNewTasks({ addTask }) {
           <button type="submit">Add New Task</button>
         </div>
       </form>
+      {showToast && <div className="toast">Note added successfully!</div>}
     </div>
   );
 }

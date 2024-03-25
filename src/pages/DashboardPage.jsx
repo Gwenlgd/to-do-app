@@ -24,7 +24,7 @@ function DashboardPage({ addNote, addTask }) {
 
       <div className="container-bottom">
         <div className="tasks-display">
-          <TasksOfTheDay />
+          <TasksOfTheDay addTask={addTask} />
         </div>
 
         <div className="little-things">

@@ -5,6 +5,7 @@ function FormNewNotes({ addNote }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [createdAt, setCreatedAt] = useState("");
+  const [showToast, setShowToast] = useState(false);
 
   const handleTitle = (e) => setTitle(e.currentTarget.value);
   const handleDescription = (e) => setDescription(e.currentTarget.value);
@@ -20,6 +21,8 @@ function FormNewNotes({ addNote }) {
     };
     addNote(newNote);
     resetInputs();
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 3000);
   };
 
   const resetInputs = () => {
@@ -68,6 +71,7 @@ function FormNewNotes({ addNote }) {
           <button type="submit">Add New Note</button>
         </div>
       </form>
+      {showToast && <div className="toast">Note added successfully!</div>}
     </div>
   );
 }
