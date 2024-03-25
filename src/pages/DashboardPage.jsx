@@ -1,10 +1,10 @@
 import Calendar from "../components/Calendar/Calendar";
 import FormNewTasks from "../components/Tasks/FormNewTasks";
-import Notes from "../components/Notes/Notes";
 import TasksOfTheDay from "../components/Tasks/TasksOfTheDay";
 import Quotes from "../components/Quotes/Quotes";
 import Clock from "../components/Clock/Clock";
 import FormNewNotes from "../components/Notes/FormNewNotes";
+// import Notes from "../components/Notes/Notes";
 
 function DashboardPage() {
   return (

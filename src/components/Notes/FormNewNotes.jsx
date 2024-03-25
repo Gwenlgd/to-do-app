@@ -1,16 +1,19 @@
 import { useState, useEffect } from "react";
 import "./Notes.css";
-import data from "../../data/notes.json";
 
 function FormNewNotes() {
-  const [notes, setNotes] = useState(data);
+  const [notes, setNotes] = useState(() => {
+    const savedNotes = localStorage.getItem("notes");
+    return savedNotes ? JSON.parse(savedNotes) : [];
+  });
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [createdAt, setCreatedAt] = useState("");
 
   useEffect(() => {
     const currentDate = new Date();
-    const formattedDate = currentDate.toISOString().split("T")[0]; // Get current date in YYYY-MM-DD format
+    const formattedDate = currentDate.toISOString().split("T")[0];
     setCreatedAt(formattedDate);
   }, []);
 
@@ -26,7 +29,9 @@ function FormNewNotes() {
       createdAt,
     };
 
-    setNotes([...notes, newNote]);
+    const updatedNotes = [...notes, newNote];
+    setNotes(updatedNotes);
+    localStorage.setItem("notes", JSON.stringify(updatedNotes)); // Save notes to localStorage
     resetInputs();
   };
 
