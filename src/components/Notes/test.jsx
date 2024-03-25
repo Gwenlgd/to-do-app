@@ -1,7 +1,6 @@
 import { useState } from "react";
-import "./Notes.css";
 
-function FormNewNotes({ addNote }) {
+function FormNewNotes() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [createdAt, setCreatedAt] = useState("");
@@ -13,12 +12,16 @@ function FormNewNotes({ addNote }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const newNote = {
-      id: crypto.randomUUID(),
       title,
       description,
       createdAt,
     };
-    addNote(newNote);
+
+    // You might want to perform additional validation or checks here before adding the new note.
+    // For example, checking if the title and description are not empty.
+
+    // Your logic for adding the new note can go here.
+
     resetInputs();
   };
 

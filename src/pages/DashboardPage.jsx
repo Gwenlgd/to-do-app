@@ -1,12 +1,12 @@
 import Calendar from "../components/Calendar/Calendar";
-import FormNewTasks from "../components/Tasks/FormNewTasks";
-import TasksOfTheDay from "../components/Tasks/TasksOfTheDay";
 import Quotes from "../components/Quotes/Quotes";
 import Clock from "../components/Clock/Clock";
+import TasksOfTheDay from "../components/Tasks/TasksOfTheDay";
+import FormNewTasks from "../components/Tasks/FormNewTasks";
 import FormNewNotes from "../components/Notes/FormNewNotes";
 // import Notes from "../components/Notes/Notes";
 
-function DashboardPage() {
+function DashboardPage({ addNote, addTask }) {
   return (
     <div className="container-dash">
       <div className="container-top">
@@ -15,10 +15,10 @@ function DashboardPage() {
         </div>
         {/* <Tasks /> */}
         <div className="form-new-tasks">
-          <FormNewTasks />
+          <FormNewTasks addTask={addTask} />
         </div>
         <div className="notes">
-          <FormNewNotes />
+          <FormNewNotes addNote={addNote} />
         </div>
       </div>
 
