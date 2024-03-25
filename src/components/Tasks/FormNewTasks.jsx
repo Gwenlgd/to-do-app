@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import "./Tasks.css";
 import data from "../../data/tasksdata.json";
 
-function FormNewTasks() {
-  const [tasks, setTasks] = useState(data);
+function FormNewTasks({ addTask }) {
+  // const [tasks, setTasks] = useState(data);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("-1");
@@ -28,14 +28,17 @@ function FormNewTasks() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const newTask = {
+      id: crypto.randomUUID(),
       title,
       description,
       category,
       dueDate,
       statusTask,
     };
+    console.log("handlesubmit");
+    addTask(newTask);
 
-    setTasks([...tasks, newTask]);
+    // setTasks([...tasks, newTask]);
     resetInputs();
   };
 
@@ -43,9 +46,10 @@ function FormNewTasks() {
     setTitle("");
     setDescription("");
     setCategory("-1");
-    dueDate("");
+    setDueDate("");
     setStatusTask(false);
   };
+
   return (
     <div>
       {/* FORM */}

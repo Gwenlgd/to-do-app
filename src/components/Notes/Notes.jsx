@@ -3,8 +3,7 @@ import data from "../../data/notes.json";
 import { Link } from "react-router-dom";
 import "./Notes.css";
 
-function Notes() {
-  const [notes, setNotes] = useState(data);
+function Notes({ notes, setNotes }) {
   const [editingNoteId, setEditingNoteId] = useState(null);
   const [updatedNote, setUpdatedNote] = useState({
     title: "",
@@ -41,14 +40,13 @@ function Notes() {
     setEditingNoteId(null);
   }
 
-  // Sort notes by creation date (from newest to oldest)
   const sortedNotes = [...notes].sort((a, b) => {
     return new Date(b.createdAt) - new Date(a.createdAt);
   });
 
   return (
     <div className="list-container">
-      <Link to="/all-notes">Show All Notes</Link>
+      <Link to="/all-notes">Show All Notes : {notes.length} notes</Link>
       {sortedNotes.map((note) => (
         <div key={note.id} className="note-container">
           {editingNoteId === note.id ? (

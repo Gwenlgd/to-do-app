@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import data from "../../data/tasksdata.json";
 import "./Tasks.css";
 
-function Tasks() {
-  const [tasks, setTasks] = useState(data);
+function Tasks({ tasks, setTasks }) {
   const [editingTask, setEditingTask] = useState(null);
   const [updatedTask, setUpdatedTask] = useState({
     title: "",
@@ -53,7 +52,7 @@ function Tasks() {
 
   return (
     <div className="list-container">
-      <Link to="/all-tasks">Show All Tasks</Link>
+      <Link to="/all-tasks">Show All Tasks : {tasks.length} tasks</Link>
       {sortedTasks.map((task) => {
         return (
           <div key={task.id} className="task-container">
