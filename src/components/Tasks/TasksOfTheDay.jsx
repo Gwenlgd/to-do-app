@@ -68,9 +68,28 @@ function TasksOfTheDay() {
                       name="title"
                       value={updatedTask.title}
                       onChange={handleChange}
+                      required
                     />
                   </label>
-                  {/* Add other input fields for editing */}
+                  <label>
+                    New description
+                    <textarea
+                      name="description"
+                      value={updatedTask.description}
+                      onChange={handleChange}
+                      required
+                    ></textarea>
+                  </label>
+                  <label>
+                    New due date
+                    <input
+                      type="date"
+                      name="createdAt"
+                      value={updatedTask.createdAt}
+                      onChange={handleChange}
+                      required
+                    />
+                  </label>
                   <button type="submit">Save</button>
                 </form>
               ) : (

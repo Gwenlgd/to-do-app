@@ -25,10 +25,10 @@ function Tasks() {
     setUpdatedTask(taskToEdit);
   }
 
-  // function handleChange(event) {
-  //   const { name, value } = event.target;
-  //   setUpdatedTask({ ...updatedTask, [name]: value });
-  // }
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setUpdatedTask({ ...updatedTask, [name]: value });
+  }
 
   function handleCheckboxChange(taskId) {
     const updatedTasks = tasks.map((task) =>
@@ -59,7 +59,36 @@ function Tasks() {
           <div key={task.id} className="task-container">
             {editingTask === task.id ? (
               <form onSubmit={handleSubmit}>
-                {/* Input fields for editing */}
+                <label>
+                  New title
+                  <input
+                    type="text"
+                    name="title"
+                    value={updatedTask.title}
+                    onChange={handleChange}
+                    required
+                  />
+                </label>
+                <label>
+                  New description
+                  <textarea
+                    name="description"
+                    value={updatedTask.description}
+                    onChange={handleChange}
+                    required
+                  ></textarea>
+                </label>
+                <label>
+                  New due date
+                  <input
+                    type="date"
+                    name="createdAt"
+                    value={updatedTask.createdAt}
+                    onChange={handleChange}
+                    required
+                  />
+                </label>
+                <button type="submit">Save</button>
               </form>
             ) : (
               <>
