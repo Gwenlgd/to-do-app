@@ -33,7 +33,7 @@ function Quotes() {
   }, []);
 
   return (
-    <div>
+    <div className="quote">
       <p>{currentQuote}</p>
     </div>
   );

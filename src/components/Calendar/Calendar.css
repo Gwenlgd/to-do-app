@@ -1,19 +1,25 @@
 .calendar {
-  border: 1px solid;
   width: 300px;
-  height: 250px;
-  
-.react-calendar {
-  width: 250px;
-  height: 250px;
-  max-width: 100%;
-  background: rgb(202, 204, 141);
-  border: 1px solid #a0a096;
-  font-family: Arial, Helvetica, sans-serif;
+  height: 245px;
+  /* background: linear-gradient(45deg, #fc466b, #3f5efb); */
+  font-family: "Montserrat", sans-serif;
   line-height: 1em;
-  padding: 1px;
-  margin: 3px;
-  border-radius: 40px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.react-calendar {
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
 }
 
 .react-calendar--doubleView {
@@ -52,7 +58,26 @@
 .react-calendar__navigation {
   display: flex;
   height: 44px;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
+}
+
+.react-calendar__navigation__label__labelText {
+  font-size: 0.7rem;
+}
+
+.react-calendar__navigation__arrow,
+.react-calendar__month-view__weekdays,
+.react-calendar__month-view__days {
+  font-size: 0.9rem;
+}
+
+.react-calendar__navigation__arrow,
+.react-calendar__month-view__weekdays,
+.react-calendar__month-view__days,
+.react-calendar__navigation__label__labelText {
+  font-weight: 700;
+  color: #fff;
+  opacity: 0.9;
 }
 
 .react-calendar__navigation button {
@@ -66,6 +91,7 @@
 
 .react-calendar__navigation button:enabled:hover,
 .react-calendar__navigation button:enabled:focus {
+  border-radius: 5000px;
   background-color: #e6e6e6;
 }
 
@@ -73,12 +99,12 @@
   text-align: center;
   text-transform: uppercase;
   font: inherit;
-  font-size: 0.65em;
+  font-size: 0.75em;
   font-weight: bold;
 }
 
 .react-calendar__month-view__weekdays__weekday {
-  padding: 0.5em;
+  padding: 0.7em;
 }
 
 .react-calendar__month-view__weekNumbers .react-calendar__tile {
@@ -86,18 +112,14 @@
   align-items: center;
   justify-content: center;
   font: inherit;
-  font-size: 0.75em;
+  font-size: 1em;
   font-weight: bold;
-}
-
-.react-calendar__month-view__days__day--weekend {
-  color: #2300d1;
 }
 
 .react-calendar__month-view__days__day--neighboringMonth,
 .react-calendar__decade-view__years__year--neighboringDecade,
 .react-calendar__century-view__decades__decade--neighboringCentury {
-  color: #757575;
+  color: #96bacf;
 }
 
 .react-calendar__year-view .react-calendar__tile,
@@ -114,9 +136,16 @@
   line-height: 16px;
   font: inherit;
   font-size: 0.65em;
+  color: #f0f0f0;
+}
+.react-calendar__month-view__days__day--weekend {
+  /* CHANGE COLOR */
+  font-weight: bold;
+  color: #6597dd;
 }
 
 .react-calendar__tile:disabled {
+  border-radius: 5000px;
   background-color: #f0f0f0;
   color: #ababab;
 }
@@ -129,37 +158,44 @@
 
 .react-calendar__tile:enabled:hover,
 .react-calendar__tile:enabled:focus {
-  background-color: #e6e6e6;
+  border-radius: 5000px;
+  background-color: #578acf;
 }
 
 .react-calendar__tile--now {
-  background: #ffff76;
+  border-radius: 5000px;
+  background: #578acf;
 }
 
 .react-calendar__tile--now:enabled:hover,
 .react-calendar__tile--now:enabled:focus {
-  background: #ffffa9;
+  border-radius: 5000px;
+  background: #578acf;
 }
 
 .react-calendar__tile--hasActive {
-  background: #76baff;
+  border-radius: 5000px;
+  background: #96bacf;
 }
 
 .react-calendar__tile--hasActive:enabled:hover,
 .react-calendar__tile--hasActive:enabled:focus {
-  background: #a9d4ff;
+  border-radius: 5000px;
+  background: #96bacf;
 }
 
 .react-calendar__tile--active {
-  background: #8dbba9;
-  color: white;
+  border-radius: 5000px;
+  background: #9cb9cf;
+  color: #f0f0f0;
 }
 
 .react-calendar__tile--active:enabled:hover,
 .react-calendar__tile--active:enabled:focus {
-  background: #95ede1;
+  border-radius: 5000px;
+  background: #578acf;
 }
 
 .react-calendar--selectRange .react-calendar__tile--hover {
-  background-color: #e6e6e6;
+  background-color: #578acf;
 }

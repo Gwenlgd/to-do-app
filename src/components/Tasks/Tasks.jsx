@@ -52,14 +52,36 @@ function Tasks({ tasks, setTasks }) {
 
   return (
     <div className="list-container">
-      <Link to="/all-tasks">Show All Tasks : {tasks.length} tasks</Link>
+      <h2>TOTAL: {tasks.length} TASKS </h2>
       {sortedTasks.map((task) => {
         return (
-          <div key={task.id} className="task-container">
-            {editingTask === task.id ? (
-              <form onSubmit={handleSubmit}>
-                <label>
-                  New title
+          <div key={task.id} className="task-container-list">
+            <>
+              <div className="task-un">
+                <div className="check-part">
+                  <p>Due: {task.dueDate}</p>
+                  <label class="checkbox-label">
+                    <input
+                      id="checkbox-st"
+                      type="checkbox"
+                      checked={task.status}
+                      onChange={() => handleCheckboxChange(task.id)}
+                    />
+                  </label>
+                </div>
+                <div className="task-ti-cat">
+                  <span>{task.title}</span>
+                  <p className="task-cat">{task.category}</p>
+                </div>
+                <p>{task.description}</p>
+                <button onClick={() => handleUpdate(task.id)}>Update</button>
+                <button onClick={() => handleDelete(task.id)}>Delete</button>
+              </div>
+            </>
+            {editingTask === task.id && (
+              <>
+                {" "}
+                <form onSubmit={handleSubmit}>
                   <input
                     type="text"
                     name="title"
@@ -67,18 +89,12 @@ function Tasks({ tasks, setTasks }) {
                     onChange={handleChange}
                     required
                   />
-                </label>
-                <label>
-                  New description
                   <textarea
                     name="description"
                     value={updatedTask.description}
                     onChange={handleChange}
                     required
                   ></textarea>
-                </label>
-                <label>
-                  New due date
                   <input
                     type="date"
                     name="createdAt"
@@ -86,26 +102,8 @@ function Tasks({ tasks, setTasks }) {
                     onChange={handleChange}
                     required
                   />
-                </label>
-                <button type="submit">Save</button>
-              </form>
-            ) : (
-              <>
-                <h2>Title: {task.title}</h2>
-                <p>Category: {task.category}</p>
-                <p>Description: {task.description}</p>
-                <p>Due date: {task.dueDate}</p>
-                <label>
-                  Status:
-                  <input
-                    type="checkbox"
-                    checked={task.status}
-                    onChange={() => handleCheckboxChange(task.id)}
-                  />
-                  {task.status ? "Completed" : "Not Completed"}
-                </label>
-                <button onClick={() => handleDelete(task.id)}>Delete</button>
-                <button onClick={() => handleUpdate(task.id)}>Update</button>
+                  <button type="submit">Save</button>
+                </form>
               </>
             )}
           </div>

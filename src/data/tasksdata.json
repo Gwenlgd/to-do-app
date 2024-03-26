@@ -42,7 +42,7 @@
   {
     "id": 6,
     "title": "Study for the exam",
-    "description": "Spend 2 hours studying for the upcoming history exam.",
+    "description": "Spend 2 hours studying for the upcoming history, geography and math exam.",
     "category": "Education & Learning",
     "dueDate": "2024-04-02",
     "statusTask": false
@@ -66,7 +66,7 @@
   {
     "id": 9,
     "title": "Attend team meeting",
-    "description": "Join the weekly team meeting to discuss project progress.",
+    "description": "Join the weekly tech team meeting to discuss all the projects progress.",
     "category": "Work Projects",
     "dueDate": "2024-03-26",
     "statusTask": false
@@ -74,7 +74,7 @@
   {
     "id": 10,
     "title": "Exercise at the park",
-    "description": "Exercise at the park for 30 minutes to stay active.",
+    "description": "Exercise at the park for 30 minutes to stay active and enhoy the sun.",
     "category": "Health & Fitness",
     "dueDate": "2024-03-29",
     "statusTask": false

@@ -1,19 +1,19 @@
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import NavBar from "./components/NavBar/NavBar";
+// import NavBar from "./components/NavBar/NavBar";
 import SideBar from "./components/SideBar/SideBar";
-import Footer from "./components/Footer/Footer";
 import "./App.css";
 import NotFoundPage from "./pages/NotFoundPage";
 import AboutPage from "./pages/AboutPage";
 import DashboardPage from "./pages/DashboardPage";
 import Tasks from "./components/Tasks/Tasks";
 import Notes from "./components/Notes/Notes";
-import data from "./data/notes.json";
+import dataNotes from "./data/notes.json";
+import dataTasks from "./data/tasksdata.json";
 
 function App() {
-  const [notes, setNotes] = useState(data);
-  const [tasks, setTasks] = useState(data);
+  const [notes, setNotes] = useState(dataNotes);
+  const [tasks, setTasks] = useState(dataTasks);
 
   function addNote(note) {
     setNotes([...notes, note]);
@@ -24,14 +24,20 @@ function App() {
   }
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="main-container">
         <SideBar />
 
         <Routes>
           <Route
             path="/"
-            element={<DashboardPage addNote={addNote} addTask={addTask} />}
+            element={
+              <DashboardPage
+                addNote={addNote}
+                addTask={addTask}
+                tasks={tasks}
+              />
+            }
           />
           <Route
             path="/tasks"
@@ -45,7 +51,6 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
-      <Footer />
     </>
   );
 }

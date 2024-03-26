@@ -35,40 +35,32 @@ function FormNewNotes({ addNote }) {
     <div>
       {/* FORM */}
       <form onSubmit={handleSubmit}>
-        <span>Add A New Note</span>
-        <div>
-          <label>
-            Title
-            <input
-              name="title"
-              type="text"
-              placeholder="Title"
-              value={title}
-              onChange={handleTitle}
-            />
-          </label>
-          <label>
-            Description
-            <textarea
-              name="description"
-              placeholder="Description"
-              value={description}
-              onChange={handleDescription}
-            ></textarea>
-          </label>
-        </div>
-        <div>
-          <label>
-            Created At
-            <input
-              name="createdAt"
-              type="date"
-              value={createdAt}
-              onChange={handleCreatedAt}
-            />
-          </label>
-
-          <button type="submit">Add New Note</button>
+        <span>New Note</span>
+        <div className="form-input">
+          <input
+            name="title"
+            type="text"
+            placeholder="Title"
+            value={title}
+            onChange={handleTitle}
+          />
+          <input
+            name="description"
+            type="text"
+            placeholder="Description"
+            id="description"
+            value={description}
+            onChange={handleDescription}
+          />
+          {/* </div>
+        <div> */}
+          <input
+            name="createdAt"
+            type="date"
+            value={createdAt}
+            onChange={handleCreatedAt}
+          />
+          <button type="submit">Add</button>
         </div>
       </form>
       {showToast && <div className="toast">Note added successfully!</div>}
