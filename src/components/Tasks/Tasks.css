@@ -76,7 +76,7 @@
   background: linear-gradient(
     to top right,
     rgba(48, 207, 208, 0.3) 0%,
-    rgba(51, 8, 103, 0.3) 100%
+    rgba(51, 8, 103, 0.2) 100%
   );
 }
 
@@ -140,7 +140,14 @@
 .form-new-tasks form button {
   font-size: 1rem;
 }
-
+.form-new-tasks form input:hover,
+.form-new-tasks form select:hover,
+.form-new-tasks form textarea:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(51, 8, 103, 0.3);
+}
 .form-new-tasks form button:hover,
 .task-un button:hover,
 .tasks-of-the-day .task-container button:hover {
@@ -228,6 +235,10 @@
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   margin-top: 20px;
+}
+
+.today-task:hover {
+  box-shadow: 10px 20px 10px -10px rgba(128, 179, 192, 0.4); /* Adjust box-shadow on hover */
 }
 
 .first-line-task {
