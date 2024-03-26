@@ -141,8 +141,13 @@
   font-size: 1rem;
 }
 
-.form-new-tasks form button:hover {
+.form-new-tasks form button:hover,
+.task-un button:hover,
+.tasks-of-the-day .task-container button:hover {
   cursor: pointer;
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(51, 8, 103, 0.3);
 }
 
 .form-new-tasks .toast {
