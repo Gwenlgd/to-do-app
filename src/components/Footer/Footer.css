@@ -1,5 +1,9 @@
 .footer {
+  display: flex;
+  align-items: end;
   text-align: center;
-  height: 20vh;
-  background-color: var(--bg-beige);
+}
+
+.footer p {
+  font-size: 0.6rem;
 }

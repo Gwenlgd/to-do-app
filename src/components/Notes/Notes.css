@@ -1,5 +1,123 @@
 .notes {
-  border: 1px solid;
+  /* border: 1px solid; */
+  border-radius: 20px;
   width: 300px;
   height: 250px;
+  /* ICI pour changer couleur fond */
+  /* background: linear-gradient(45deg, #fc466b, #3f5efb); */
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.note-container {
+  margin: 20px;
+  display: inline-block;
+  width: 500px;
+}
+
+.notes form {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 1em 1.3em 1.65em 1em;
+  /* height: calc(100% - 3em); */
+  border-radius: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-update-notes {
+  height: 200px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 1em 1.3em 1.65em 1em;
+  /* height: calc(100% - 3em); */
+  border-radius: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.task-un p {
+  color: #fff;
+}
+
+.notes form span {
+  font-weight: 700;
+  color: #fff;
+  /* opacity: 0.7; */
+  opacity: 0.9;
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.notes ::placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+
+.notes form input,
+.notes form textarea,
+.notes form button,
+.form-update-notes input,
+.form-update-notes textarea {
+  background: transparent;
+  width: 100%;
+  padding: 0.4em 0.3em;
+  margin-bottom: 1em;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5000px;
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+.form-update-notes button {
+  background: transparent;
+  width: 20%;
+}
+
+.notes form input:focus,
+.notes form textarea:focus {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+.notes form button {
+  font-size: 1rem;
+}
+
+.notes form button:hover {
+  cursor: pointer;
+}
+
+.notes .toast {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to top right,
+    rgba(48, 207, 208, 0.3) 0%,
+    rgba(51, 8, 103, 0.3) 100%
+  );
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  align-items: center;
 }

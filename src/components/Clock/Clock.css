@@ -1,7 +1,78 @@
-.clock {
+/* Utilisation de variables */
+:root {
+  --clock-border-color: rgb(125, 176, 165);
+  --clock-hand-color: rgb(88, 138, 207);
+  --clock-second-hand-color: rgb(1, 1, 1);
+  --clock-color-white: #f0eff2;
+}
+/* .clock {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 50px;
   text-align: center;
   margin: 0 auto;
   background-color: whitesmoke;
+} */
+
+.clock-container {
+  width: 290px;
+  height: 150px;
+}
+.clock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.clock-two p {
+  font-size: 30px;
+  color: var(--clock-color-white);
+}
+/* Utilisation de la même convention de nommage */
+.react-clock {
+  display: flex;
+  position: relative;
+}
+/* Organiser les sélecteurs de manière logique */
+.react-clock,
+.react-clock *,
+.react-clock *:before,
+.react-clock *:after {
+  box-sizing: border-box;
+}
+/* .clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+.react-clock__face {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2px solid var(--clock-color-white);
+  border-radius: 50%;
+}
+.react-clock__hand,
+.react-clock__mark {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+}
+.react-clock__hand__body,
+.react-clock__mark__body {
+  position: absolute;
+  background-color: var(--clock-hand-color);
+  transform: translateX(-60%);
+}
+.react-clock__mark__number {
+  position: absolute;
+  left: -40px;
+  width: 80px;
+  text-align: center;
+}
+.react-clock__second-hand__body {
+  background-color: var(--clock-color-white);
 }

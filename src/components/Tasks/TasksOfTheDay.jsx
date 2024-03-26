@@ -47,12 +47,15 @@ function TasksOfTheDay({ tasks, setTasks }) {
   const today = new Date().toISOString().split("T")[0];
   // const tasksOfTheDay = tasks.filter((task) => task.dueDate === today);
   const tasksOfTheDay = tasks
-    ? tasks.filter((task) => task.dueDate === today)
+    ? tasks.filter((task) => {
+        console.log(task.dueDate, today);
+        return task.dueDate === today;
+      })
     : [];
 
   return (
-    <div>
-      <h2>Your tasks for today</h2>
+    <div className="tasks-of-the-day">
+      <span>Your tasks for today</span>
       {tasksOfTheDay.length === 0 ? (
         <div>
           <h3>No tasks for today. Please add one.</h3>
@@ -63,54 +66,54 @@ function TasksOfTheDay({ tasks, setTasks }) {
             <div key={task.id} className="task-container">
               {editingTask === task.id ? (
                 <form onSubmit={handleSubmit}>
-                  <label>
-                    New title
-                    <input
-                      type="text"
-                      name="title"
-                      value={updatedTask.title}
-                      onChange={handleChange}
-                      required
-                    />
-                  </label>
-                  <label>
-                    New description
-                    <textarea
-                      name="description"
-                      value={updatedTask.description}
-                      onChange={handleChange}
-                      required
-                    ></textarea>
-                  </label>
-                  <label>
-                    New due date
-                    <input
-                      type="date"
-                      name="createdAt"
-                      value={updatedTask.createdAt}
-                      onChange={handleChange}
-                      required
-                    />
-                  </label>
+                  <input
+                    type="text"
+                    name="title"
+                    value={updatedTask.title}
+                    onChange={handleChange}
+                    required
+                  />
+                  <textarea
+                    name="description"
+                    value={updatedTask.description}
+                    onChange={handleChange}
+                    required
+                  ></textarea>
+
+                  <input
+                    type="date"
+                    name="createdAt"
+                    value={updatedTask.createdAt}
+                    onChange={handleChange}
+                    required
+                  />
                   <button type="submit">Save</button>
                 </form>
               ) : (
                 <>
-                  <h3>Title: {task.title}</h3>
-                  <p>Category: {task.category}</p>
-                  <p>Description: {task.description}</p>
-                  <p>Due date: {task.dueDate}</p>
-                  <label>
-                    Status:
-                    <input
-                      type="checkbox"
-                      checked={task.status}
-                      onChange={() => handleCheckboxChange(task.id)}
-                    />
-                    {task.status ? "Completed" : "Not Completed"}
-                  </label>
-                  <button onClick={() => handleDelete(task.id)}>Delete</button>
-                  <button onClick={() => handleUpdate(task.id)}>Update</button>
+                  <div className="today-task">
+                    <div className="first-line-task">
+                      <label>
+                        {/* Status: */}
+                        <input
+                          id="check-23"
+                          type="checkbox"
+                          checked={task.status}
+                          onChange={() => handleCheckboxChange(task.id)}
+                        />
+                      </label>
+                      <h3>{task.title}</h3>
+                      <p className="task-cat">{task.category}</p>
+                    </div>
+                    <p>Description: {task.description}</p>
+                    <p>Due date: {task.dueDate}</p>
+                    <button onClick={() => handleUpdate(task.id)}>
+                      Update
+                    </button>
+                    <button onClick={() => handleDelete(task.id)}>
+                      Delete
+                    </button>
+                  </div>
                 </>
               )}
             </div>

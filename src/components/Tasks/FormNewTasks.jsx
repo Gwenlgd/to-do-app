@@ -56,77 +56,64 @@ function FormNewTasks({ addTask }) {
       <form onSubmit={handleSubmit}>
         <span>Add A New Task</span>
         <div>
-          <label>
-            Title
-            <input
-              name="title"
-              type="text"
-              placeholder="title"
-              id="title"
-              value={title}
-              onChange={handleTitle}
-            />
-          </label>
-          <label>
-            Description
-            <input
-              name="description"
-              type="text"
-              placeholder="description"
-              id="description"
-              value={description}
-              onChange={handleDescription}
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            Category
-            <select
-              name="category"
-              id="category"
-              value={category}
-              onChange={handleCategory}
-            >
-              <option disabled value="-1">
-                -- None --
-              </option>
-              <option value="Work Projects">Work Projects</option>
-              <option value="Personal Errands">Personal Errands</option>
-              <option value="Health & Fitness">Health & Fitness</option>
-              <option value="Home Maintenance">Home Maintenance</option>
-              <option value="Financial Management">Financial Management</option>
-              <option value="Education & Learning">Education & Learning</option>
-              <option value="Travel Planning">Travel Planning</option>
-            </select>
-          </label>
-
-          <label>
-            Due Date
-            <input
-              name="dueDate"
-              type="date"
-              id="dueDate"
-              value={dueDate}
-              onChange={handleDueDate}
-            />
-          </label>
-
-          <label>
-            Status Task
-            <input
-              name="statusTask"
-              type="checkbox"
-              id="status"
-              value={statusTask}
-              onChange={handleStatusTask}
-            />
-          </label>
-
-          <button type="submit">Add New Task</button>
+          {/* TITLE */}
+          <input
+            name="title"
+            type="text"
+            placeholder="Title"
+            id="title"
+            value={title}
+            onChange={handleTitle}
+          />
+          {/* DESCRIPTION*/}
+          <input
+            name="description"
+            type="text"
+            placeholder="Description"
+            id="description"
+            value={description}
+            onChange={handleDescription}
+          />
+          {/* </div>
+        <div> */}
+          {/* CATEGORY */}
+          <select
+            name="category"
+            id="category"
+            value={category}
+            onChange={handleCategory}
+          >
+            <option disabled value="-1">
+              -- None --
+            </option>
+            <option value="Work Projects">Work Projects</option>
+            <option value="Personal Errands">Personal Errands</option>
+            <option value="Health & Fitness">Health & Fitness</option>
+            <option value="Home Maintenance">Home Maintenance</option>
+            <option value="Financial Management">Financial Management</option>
+            <option value="Education & Learning">Education & Learning</option>
+            <option value="Travel Planning">Travel Planning</option>
+          </select>
+          {/* DUEDATE */}
+          <input
+            name="dueDate"
+            type="date"
+            id="dueDate"
+            value={dueDate}
+            onChange={handleDueDate}
+          />
+          {/* STATUS */}
+          {/* <input
+            name="statusTask"
+            type="checkbox"
+            id="status"
+            value={statusTask}
+            onChange={handleStatusTask}
+          /> */}
+          <button type="submit">Add</button>
         </div>
       </form>
-      {showToast && <div className="toast">Note added successfully!</div>}
+      {showToast && <div className="toast">Task added successfully!</div>}
     </div>
   );
 }
