@@ -55,7 +55,7 @@ function TasksOfTheDay({ tasks, setTasks }) {
 
   return (
     <div className="tasks-of-the-day">
-      <span>Your tasks for today</span>
+      <span>YOUR TASKS FOR TODAY</span>
       {tasksOfTheDay.length === 0 ? (
         <div>
           <h3>No tasks for today. Please add one.</h3>

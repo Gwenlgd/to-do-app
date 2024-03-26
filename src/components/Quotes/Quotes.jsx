@@ -34,7 +34,7 @@ function Quotes() {
 
   return (
     <div className="quote">
-      <p>{currentQuote}</p>
+      <p className="homemade-apple-regular">{currentQuote}</p>
     </div>
   );
 }
