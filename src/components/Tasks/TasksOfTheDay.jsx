@@ -65,28 +65,39 @@ function TasksOfTheDay({ tasks, setTasks }) {
           return (
             <div key={task.id} className="task-container">
               {editingTask === task.id ? (
-                <form onSubmit={handleSubmit}>
-                  <input
-                    type="text"
-                    name="title"
-                    value={updatedTask.title}
-                    onChange={handleChange}
-                    required
-                  />
-                  <textarea
-                    name="description"
-                    value={updatedTask.description}
-                    onChange={handleChange}
-                    required
-                  ></textarea>
-
-                  <input
-                    type="date"
-                    name="createdAt"
-                    value={updatedTask.createdAt}
-                    onChange={handleChange}
-                    required
-                  />
+                <form
+                  onSubmit={handleSubmit}
+                  className="form-update-tasks-today"
+                >
+                  <label>
+                    Update your title :
+                    <input
+                      type="text"
+                      name="title"
+                      value={updatedTask.title}
+                      onChange={handleChange}
+                      required
+                    />
+                  </label>
+                  <label>
+                    Update your description :
+                    <input
+                      name="description"
+                      value={updatedTask.description}
+                      onChange={handleChange}
+                      required
+                    />
+                  </label>
+                  <label>
+                    Update your due date :
+                    <input
+                      type="date"
+                      name="createdAt"
+                      value={updatedTask.createdAt}
+                      onChange={handleChange}
+                      required
+                    />
+                  </label>
                   <button type="submit">Save</button>
                 </form>
               ) : (

@@ -92,7 +92,10 @@
 .form-new-tasks form button,
 .form-update-tasks input,
 .form-update-tasks textarea,
-.form-update-tasks button {
+.form-update-tasks button,
+.form-update-tasks-today input,
+.form-update-tasks-today textarea,
+.form-update-tasks-today button {
   background: transparent;
   width: calc(100% - 2px);
   padding: 0.4em 0.3em;
@@ -109,7 +112,8 @@
   transition: all 0.2s ease-in-out;
 }
 
-.form-update-tasks button {
+.form-update-tasks button,
+.form-update-tasks-today button {
   background: transparent;
   width: 20%;
 }
@@ -196,6 +200,12 @@
   text-align: center;
   position: relative;
   transition: all 0.2s ease-in-out;
+}
+
+.form-update-tasks-today {
+  padding: 1em 1.3em 1.65em 1em;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
 /* TASKS OF THE DAY */
