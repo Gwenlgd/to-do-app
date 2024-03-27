@@ -43,11 +43,11 @@
   padding: 20px;
   text-align: center;
   letter-spacing: 4px;
-  font-style: italic;
+  /* font-style: italic; */
 }
-/*
-.homemade-apple-regular {
-  font-family: "Homemade Apple", cursive;
+
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
   font-weight: 400;
   font-style: normal;
-} */
+}

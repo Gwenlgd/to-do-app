@@ -48,7 +48,6 @@ function TasksOfTheDay({ tasks, setTasks }) {
   // const tasksOfTheDay = tasks.filter((task) => task.dueDate === today);
   const tasksOfTheDay = tasks
     ? tasks.filter((task) => {
-        console.log(task.dueDate, today);
         return task.dueDate === today;
       })
     : [];
@@ -62,6 +61,7 @@ function TasksOfTheDay({ tasks, setTasks }) {
         </div>
       ) : (
         tasksOfTheDay.map((task) => {
+          console.log(updatedTask);
           return (
             <div key={task.id} className="task-container">
               {editingTask === task.id ? (
@@ -93,7 +93,7 @@ function TasksOfTheDay({ tasks, setTasks }) {
                     <input
                       type="date"
                       name="createdAt"
-                      value={updatedTask.createdAt}
+                      value={updatedTask.dueDate}
                       onChange={handleChange}
                       required
                     />

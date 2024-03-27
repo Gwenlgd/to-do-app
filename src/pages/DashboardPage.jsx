@@ -6,7 +6,7 @@ import FormNewTasks from "../components/Tasks/FormNewTasks";
 import FormNewNotes from "../components/Notes/FormNewNotes";
 // import Notes from "../components/Notes/Notes";
 
-function DashboardPage({ addNote, addTask, tasks }) {
+function DashboardPage({ addNote, addTask, tasks, setTasks }) {
   return (
     <div className="container-dash">
       <div className="container-top">
@@ -24,7 +24,7 @@ function DashboardPage({ addNote, addTask, tasks }) {
 
       <div className="container-bottom">
         <div className="tasks-display">
-          <TasksOfTheDay addTask={addTask} tasks={tasks} />
+          <TasksOfTheDay addTask={addTask} tasks={tasks} setTasks={setTasks} />
         </div>
 
         <div className="little-things">

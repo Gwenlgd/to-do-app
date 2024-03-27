@@ -36,6 +36,7 @@ function App() {
                 addNote={addNote}
                 addTask={addTask}
                 tasks={tasks}
+                setTasks={setTasks}
               />
             }
           />
